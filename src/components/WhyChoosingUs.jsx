@@ -1,7 +1,9 @@
 
 import React from "react";
+import { motion, } from "framer-motion"
 
 const WhyChoosingUs = () => {
+ 
   const texts = [
     {
       title: "Luxury facilities",
@@ -17,7 +19,12 @@ const WhyChoosingUs = () => {
     }
   ];
   return (
-    <section className="container mx-auto px-4 py-28 ">
+    <motion.section 
+     initial={{ opacity: 0, y: 100 }}
+     whileInView={{opacity:1 , y:0}}
+      transition={{ duration:1}}
+    
+    className="container mx-auto px-4 py-28 ">
       <div className="md:flex space-y-12" >
         <div className="flex justify-center items-center mr-24 ">
           <h2 className="text-5xl font-bold ">Why Choosing Us</h2>
@@ -33,7 +40,7 @@ const WhyChoosingUs = () => {
             }
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

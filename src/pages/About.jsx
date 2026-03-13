@@ -1,9 +1,24 @@
 import React from 'react'
 import banner from "../assets/about-background.jpg";
+import { motion, } from "framer-motion"
 
 import Experiences from '../components/Experiences';
 
 const About = () => {
+  // text animation function
+   const textAnimation= (text, className) => {
+    return text.split("").map((char,index) => (
+      <motion.span
+        key={index}
+        className={className}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+      >
+        {char}
+      </motion.span>
+    ))
+  }
   return (
      <section className="  bg-center w-full  "
     >
@@ -12,7 +27,9 @@ const About = () => {
         className='w-full lg:h-120 h-80 bg-no-repeat bg-cover flex items-center justify-center
 text-white text-center   pt-28 lg:pt-40'>
           
-        <h1 className="text-4xl font-bold text-white mb-4">About Us</h1>
+        <h1 className="text-4xl font-bold text-white mb-4">
+          {textAnimation("About us", "text-4xl font-bold text-white mb-4")}
+        </h1>
         </div>
         <Experiences />
     </section>

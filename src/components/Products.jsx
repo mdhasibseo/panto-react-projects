@@ -4,6 +4,7 @@ import { getimg } from "../utilis/ImgGetting";
 import Rating from "../utilis/Rating";
 import { FaPlusCircle } from "react-icons/fa";
 import  btnArrow from "../assets/button-icon.png"
+import { motion, } from "framer-motion"
 
 const Products = ({ title }) => {
   const subMenu = ["Chair", " Beds", " Sofa", " Lamp"];
@@ -16,6 +17,20 @@ const Products = ({ title }) => {
     setSelectedProduct((prev)=> prev + 4);
   };
   
+  // text animation for product title
+   const textAnimation= (text, className) => {
+      return text.split("").map((char,index) => (
+        <motion.span
+          key={index}
+          className={className}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+        >
+          {char}
+        </motion.span>
+      ))
+    }
 
   const filteredProducts = products.filter(
     (product) => product.category === category,
@@ -25,7 +40,7 @@ const Products = ({ title }) => {
     <section className="container mx-auto ">
       {/* shop title  */}
       <h2 className="text-3xl text-center font-bold text-gray-800 mb-4 py-12">
-        {title}
+       {textAnimation(title, "text-gray-800")} 
       </h2>
 
       {/* sub menu for product cetegory  */}
@@ -42,10 +57,20 @@ const Products = ({ title }) => {
         ))}
       </div>
       {/* product section  */}
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4  gap-6 mt-8 lg:gap-8 px-3 ">
+      <div
+
+      
+      
+      className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4  gap-6 mt-8 lg:gap-8 px-3 ">
         {/* Product items would go here */}
-        {filteredProducts.slice(0, selectedProduct).map((item) => (
-          <div key={item.id} className="bg-white rounded-lg shadow-md  mx-auto">
+        {filteredProducts.slice(0, selectedProduct).map((item, index) => (
+          <motion.div
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{opacity:1, y:0}}
+          transition={{delay:index * 0.2, duration: 0.5}}
+          
+          
+          key={item.id} className="bg-white rounded-lg shadow-md  mx-auto">
             <div className="bg-[#FAFAFA] ">
               <img
                 src={getimg(`${item.imageUrl}`)}
@@ -67,7 +92,7 @@ const Products = ({ title }) => {
                 </button>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
       

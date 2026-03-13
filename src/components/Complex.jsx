@@ -3,13 +3,19 @@ import btnArrow from "../assets/button-icon.png";
 import metarial from "../assets/material1.png";
 import metarial1 from "../assets/material2.png";
 import metarial2 from "../assets/material3.png";
+import { motion, } from "framer-motion"
 
 const Complex = () => {
   return (
     <section className="my-20 container mx-auto  ">
       <div className="hero flex justify-center items-center px-5">
         <div className=" flex flex-col lg:flex-row justify-between items-center md:flex-col-reverse">
-          <div className="mx-auto ">
+          <motion.div
+          initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+          
+          className="mx-auto ">
             <p className="uppercase text-[#E58411]">Materials</p>
             <h3 className="text-5xl font-bold max-w-lg">
               Very serious materials for making furniture
@@ -26,8 +32,13 @@ const Complex = () => {
                 <img src={btnArrow} alt="Arrow" />
               </span>
             </button>
-          </div>
-          <div className="grid grid-re grid-cols-2  md:w-1/2 md:grid-cols-3 md:items-end pt-10 items-center">
+          </motion.div>
+          <motion.div
+          initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+          
+          className="grid grid-re grid-cols-2  md:w-1/2 md:grid-cols-3 md:items-end pt-10 items-center">
             <div className=" ">
               {/* left column - 2 small images */}
               <div>
@@ -42,7 +53,7 @@ const Complex = () => {
               <img className="object-cover" src={metarial2} alt="" />
             </div>
 
-          </div>
+          </motion.div>
           
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { motion, } from "framer-motion"
 
 // Images import korte hobe (apnar file path onujayi)
 import reviewer1 from '../assets/reviewer1.png';
@@ -231,7 +232,13 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="bg-white py-16  font-['Chakra_Petch'] overflow-hidden relative">
+    <motion.div
+    initial={{ opacity: 0 ,y:90}}
+    whileInView={{ opacity: 1 , y:0}}
+    transition={{ duration: 1.5 }}
+    
+    
+    className="bg-white py-16  font-['Chakra_Petch'] overflow-hidden relative">
      
       {/* Main Content */}
       <div className=" flex flex-col">
@@ -409,7 +416,7 @@ const Testimonials = () => {
           touch-action: none;
         }
       `}</style>
-    </div>
+    </motion.div>
   );
 };
 
