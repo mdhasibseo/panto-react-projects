@@ -5,10 +5,10 @@ import Footer from './components/Footer'
 
 export const App = () => {
   return (
-    <div>
+    <div className='min-h-screen flex flex-col'>
       <Navber/>
       
-      <main>
+      <main className='flex-1'>
         <Outlet />
 
       </main>

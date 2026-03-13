@@ -4,7 +4,7 @@ import Products from "../components/products";
 
 const Shop = () => {
   return (
-    <section className="bg-cover  bg-center w-full h-100 "
+    <section className="bg-cover  bg-center w-full  "
     >
         <div
         style={{ backgroundImage: `url(${banner})` }}

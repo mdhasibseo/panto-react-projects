@@ -22,7 +22,7 @@ const Products = ({ title }) => {
   );
 
   return (
-    <section className="container mx-auto">
+    <section className="container mx-auto ">
       {/* shop title  */}
       <h2 className="text-3xl text-center font-bold text-gray-800 mb-4 py-12">
         {title}

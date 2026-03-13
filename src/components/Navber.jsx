@@ -48,9 +48,7 @@ const Navber = () => {
               <li>
                 <a>Shop</a>
               </li>
-              <li>
-                <a>Furniture</a>
-              </li>
+             
               <li>
                 <a>About Us</a>
               </li>
@@ -83,16 +81,7 @@ const Navber = () => {
                 Shop
               </NavLink>
             </li>
-            <li>
-               <NavLink
-                to="/furniture"
-                className={({ isActive }) =>
-                  isActive ? "text-orange-400" : ""
-                }
-              >
-                Furniture
-              </NavLink>
-            </li>
+         
             <li>
                <NavLink
                 to="/about"

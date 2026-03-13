@@ -1,9 +1,10 @@
 import React from 'react'
-import banner from "../assets/about-background.jpg";
+import banner from "../assets/contact-background.jpg";
 
-import Experiences from '../components/experiences';
 
-const About = () => {
+import Complex from '../components/Complex';
+
+const Contract = () => {
   return (
      <section className="  bg-center w-full  "
     >
@@ -14,9 +15,9 @@ text-white text-center   pt-28 lg:pt-40'>
           
         <h1 className="text-4xl font-bold text-white mb-4">Welcome to Our Shop</h1>
         </div>
-        <Experiences />
+        <Complex/>
     </section>
   )
 }
 
-export default About
+export default Contract
