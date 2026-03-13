@@ -1,7 +1,7 @@
 import React from 'react'
 import banner from "../assets/about-background.jpg";
 
-import Experiences from '../components/experiences';
+import Experiences from '../components/Experiences';
 
 const About = () => {
   return (
