@@ -1,5 +1,4 @@
 import React from "react";
-import expic from "../assets/expricences.png";
 import btnArrow from "../assets/button-icon.png";
 import metarial from "../assets/material1.png";
 import metarial1 from "../assets/material2.png";

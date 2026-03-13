@@ -3,8 +3,8 @@ import banner from "../assets/banner.png";
 import {motion} from "framer-motion"
 import Hero from "./Hero";
 import WhyChoosingUs from "./WhyChoosingUs";
-import Products from "./products";
-import Experiences from "./experiences";
+import Products from "./Products";
+import Experiences from "./Experiences";
 import Complex from "./Complex";
 import Testimonials from "./Testimonials";
 

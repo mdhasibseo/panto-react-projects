@@ -12,7 +12,7 @@ const About = () => {
         className='w-full lg:h-120 h-80 bg-no-repeat bg-cover flex items-center justify-center
 text-white text-center   pt-28 lg:pt-40'>
           
-        <h1 className="text-4xl font-bold text-white mb-4">Welcome to Our Shop</h1>
+        <h1 className="text-4xl font-bold text-white mb-4">About Us</h1>
         </div>
         <Experiences />
     </section>

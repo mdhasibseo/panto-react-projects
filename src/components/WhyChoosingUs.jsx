@@ -1,4 +1,4 @@
-import { p, text } from "framer-motion/client";
+
 import React from "react";
 
 const WhyChoosingUs = () => {
