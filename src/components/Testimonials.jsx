@@ -231,10 +231,10 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="  font-['Chakra_Petch'] overflow-hidden relative">
+    <div className=" py-16  font-['Chakra_Petch'] overflow-hidden relative">
      
       {/* Main Content */}
-      <div className="h-screen flex flex-col">
+      <div className=" flex flex-col">
         <main className="flex-1 flex items-center justify-center relative">
           {/* Carousel Container */}
           <div className="relative w-full h-[500px] md:h-[500px] sm:h-[400px] xs:h-[350px] perspective-[1000px] preserve-3d flex justify-center items-center touch-none">
