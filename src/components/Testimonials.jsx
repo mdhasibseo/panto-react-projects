@@ -231,7 +231,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className=" py-16  font-['Chakra_Petch'] overflow-hidden relative">
+    <div className="bg-white py-16  font-['Chakra_Petch'] overflow-hidden relative">
      
       {/* Main Content */}
       <div className=" flex flex-col">

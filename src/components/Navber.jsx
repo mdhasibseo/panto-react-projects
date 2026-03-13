@@ -44,17 +44,37 @@ const Navber = () => {
             <ul
               tabIndex={0}
               className="menu menu-lg dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow"
-            >
-              <li>
-                <a>Shop</a>
-              </li>
-             
-              <li>
-                <a>About Us</a>
-              </li>
-              <li>
-                <a>Contact</a>
-              </li>
+            ><li>
+              <NavLink
+                to="/shop"
+                className={({ isActive }) =>
+                  isActive ? "text-orange-400" : ""
+                }
+              >
+                Shop
+              </NavLink>
+            </li>
+         
+            <li>
+               <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive ? "text-orange-400" : ""
+                }
+              >
+                About Us
+              </NavLink>
+            </li>
+            <li>
+                <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive ? "text-orange-400" : ""
+                }
+              >
+                Contact
+              </NavLink>
+            </li>
             </ul>
           </div>
 
@@ -62,7 +82,12 @@ const Navber = () => {
           <p
             className={`text-xl font-bold transition-all duration-500 ${scrolled ? "text-black" : "text-white"}`}
           >
-            Panto
+            <NavLink
+                to="/"
+                
+              >
+               Panto
+              </NavLink>
           </p>
         </div>
 
@@ -89,7 +114,7 @@ const Navber = () => {
                   isActive ? "text-orange-400" : ""
                 }
               >
-                about us
+                About Us
               </NavLink>
             </li>
             <li>
@@ -99,13 +124,15 @@ const Navber = () => {
                   isActive ? "text-orange-400" : ""
                 }
               >
-                contact
+                Contact
               </NavLink>
             </li>
           </ul>
         </div>
 
-        <div className="navbar-end"></div>
+        <div className="navbar-end">
+          
+        </div>
       </div>
     </div>
   );
