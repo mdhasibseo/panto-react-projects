@@ -231,7 +231,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#050510] font-['Chakra_Petch'] overflow-hidden relative">
+    <div className="  font-['Chakra_Petch'] overflow-hidden relative">
      
       {/* Main Content */}
       <div className="h-screen flex flex-col">
