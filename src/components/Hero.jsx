@@ -1,6 +1,7 @@
 import React from 'react'
 import banner from "../assets/banner.png";
 import {motion} from "framer-motion"
+import ThemeToggle from '../utilis/ThemeToggle';
 
 const Hero = () => {
      const textAnimation= (text, className) => {
@@ -71,7 +72,10 @@ const Hero = () => {
           </label>
         </motion.div>
       </div>
-      <div className='absolute bottom-0 left-0 right-0 h-1/4   bg-gradient-to-t from-white/80 vai-transparent to-transparent'></div>
+      
+      
+      <ThemeToggle className="absolute  bottom-20 rounded-full transition-all delay-200 right-15" />
+
 
     </section>
   );

@@ -39,8 +39,8 @@ const Products = ({ title }) => {
   return (
     <section className="container mx-auto ">
       {/* shop title  */}
-      <h2 className="text-3xl text-center font-bold text-gray-800 mb-4 py-12">
-       {textAnimation(title, "text-gray-800")} 
+      <h2 className="text-3xl text-center font-bold  text-base-content mb-4 py-12">
+       {textAnimation(title)} 
       </h2>
 
       {/* sub menu for product cetegory  */}
@@ -50,7 +50,7 @@ const Products = ({ title }) => {
           <button
             key={index}
             onClick={() => (setActive(index), setCategory(item.trim(category)))}
-            className={`px-4 py-2 m-2  bg-gray-200 rounded-4xl hover:bg-white click:bg-blue-500 transition duration-300 cursor-pointer ${active === index ? "bg-white" : ""}`}
+            className={`px-4 py-2 m-2 text-black bg-gray-200 rounded-4xl hover:bg-white click:bg-blue-500 transition duration-300 cursor-pointer ${active === index ? "bg-white" : ""}`}
           >
             {item}
           </button>
@@ -61,7 +61,7 @@ const Products = ({ title }) => {
 
       
       
-      className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4  gap-6 mt-8 lg:gap-8 px-3 ">
+      className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4  gap-6 mt-8 lg:gap-8 px-3 pt-10 ">
         {/* Product items would go here */}
         {filteredProducts.slice(0, selectedProduct).map((item, index) => (
           <motion.div
@@ -70,8 +70,8 @@ const Products = ({ title }) => {
           transition={{delay:index * 0.2, duration: 0.5}}
           
           
-          key={item.id} className="bg-white rounded-lg shadow-md  mx-auto">
-            <div className="bg-[#FAFAFA] ">
+          key={item.id} className="bg-white rounded-lg  shadow-md  mx-auto">
+            <div className="bg-base-200 overflow-hidden ">
               <img
                 src={getimg(`${item.imageUrl}`)}
                 alt={item.name}
