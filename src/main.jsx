@@ -9,6 +9,8 @@ import About from './pages/About';
 import Home from './components/Home';
 import Shop from './pages/Shop';
 import Contract from './pages/Contract';
+import { CartProvider } from './context/CartContext';
+import Cart from './components/Cart';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +34,10 @@ const router = createBrowserRouter([
     path: "/contact",
     element: <Contract/>,
   },
+    {
+    path: "/cart",
+    element: <Cart/>,
+  },
 
     ]
   },
@@ -39,7 +45,12 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById('root')).render(
+
   <StrictMode>
-     <RouterProvider router={router} />
+    <CartProvider>
+       <RouterProvider router={router} />
+
+    </CartProvider>
+    
   </StrictMode>,
 )

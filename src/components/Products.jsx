@@ -1,16 +1,20 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import products from "../utilis/product";
 import { getimg } from "../utilis/ImgGetting";
 import Rating from "../utilis/Rating";
 import { FaPlusCircle } from "react-icons/fa";
 import  btnArrow from "../assets/button-icon.png"
 import { motion, } from "framer-motion"
+import { CartContext } from "../context/CartContext";
 
 const Products = ({ title }) => {
   const subMenu = ["Chair", " Beds", " Sofa", " Lamp"];
   const [active, setActive] = useState(0);
   const [category, setCategory] = useState("Chair");
   const [selectedProduct, setSelectedProduct] = useState(4);
+
+  // cart add section
+  const { addToCart} = useContext(CartContext);
   
 //   product increse section  for view all button
   const handleViewAll = () => {
@@ -49,7 +53,7 @@ const Products = ({ title }) => {
         {subMenu.map((item, index) => (
           <button
             key={index}
-            onClick={() => (setActive(index), setCategory(item.trim(category)))}
+           onClick={() => (setActive(index), setCategory(item.trim()))}
             className={`px-4 py-2 m-2 text-black bg-gray-200 rounded-4xl hover:bg-white click:bg-blue-500 transition duration-300 cursor-pointer ${active === index ? "bg-white" : ""}`}
           >
             {item}
@@ -87,7 +91,7 @@ const Products = ({ title }) => {
               <Rating rating={item.rating} />
               <div className="flex items-center justify-between mt-4">
                 <p className="text-gray-600">${item.price}</p>
-                <button>
+                <button onClick={() => addToCart(item)}>
                   <FaPlusCircle className="w-6 h-6" />
                 </button>
               </div>
